@@ -10,6 +10,9 @@ namespace ClientSeries.Models
 {
     public class Serie
     {
+        public Serie()
+        {
+        }
 
         public Serie(int _serieid, string _titre, string _resume, int _nbsaisons, int _nbepisodes, int _anneecreation, string _network)
         {
@@ -24,11 +27,11 @@ namespace ClientSeries.Models
 
         public int Serieid { get; set; }
         public string Titre { get; set; } = null!;
-        public string? Resume { get; set; }
+        public string Resume { get; set; }
         public int Nbsaisons { get; set; }
         public int Nbepisodes { get; set; }
         public int Anneecreation { get; set; }
-        public string? Network { get; set; }
+        public string Network { get; set; }
 
         public override bool Equals(object obj)
         {

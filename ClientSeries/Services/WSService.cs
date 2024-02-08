@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ClientSeries.Services
 {
-    internal class WSService : IService
+    public class WSService : IService
     {
         private HttpClient client;
 
