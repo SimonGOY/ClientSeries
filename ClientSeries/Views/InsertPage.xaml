@@ -1,0 +1,110 @@
+<!--  Copyright (c) Microsoft Corporation and Contributors.  -->
+<!--  Licensed under the MIT License.  -->
+
+<Page
+    x:Class="ClientSeries.Views.InsertPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ClientSeries.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <RelativePanel>
+        <TextBlock
+            Name="tbTitre"
+            Margin="0,20,0,10"
+            FontSize="25"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            Text="Titre" />
+        <TextBox
+            Name="tbxTitre"
+            Width="500"
+            Margin="0,10,0,20"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbTitre"
+            Text="{Binding serieToAdd.Titre, Mode=TwoWay}" />
+        <TextBlock
+            Name="tbResume"
+            Margin="0,10,0,10"
+            FontSize="25"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbxTitre"
+            Text="Resume" />
+        <TextBox
+            Name="tbxResume"
+            Width="500"
+            Height="100"
+            Margin="0,10,0,10"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbResume"
+            Text="{Binding serieToAdd.Resume, Mode=TwoWay}" />
+        <TextBlock
+            Name="tbNbSaisons"
+            Margin="0,10,0,10"
+            FontSize="25"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbxResume"
+            Text="NbSaisons" />
+        <TextBox
+            Name="tbxNbSaisons"
+            Width="120"
+            Margin="0,10,0,10"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbNbSaisons"
+            Text="{Binding serieToAdd.Nbsaisons, Mode=TwoWay}" />
+        <TextBlock
+            Name="tbNbEpisodes"
+            Margin="0,10,0,10"
+            FontSize="25"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbxNbSaisons"
+            Text="Nb Episodes" />
+        <TextBox
+            Name="tbxNbEpisodes"
+            Width="120"
+            Margin="0,10,0,10"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbNbEpisodes"
+            Text="{Binding serieToAdd.Nbepisodes, Mode=TwoWay}" />
+        <TextBlock
+            Name="tbAnnee"
+            Margin="0,10,0,10"
+            FontSize="25"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbxNbEpisodes"
+            Text="Annee creation" />
+        <TextBox
+            Name="tbxAnnee"
+            Width="120"
+            Margin="0,10,0,10"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbAnnee"
+            Text="{Binding serieToAdd.Anneecreation, Mode=TwoWay}" />
+        <TextBlock
+            Name="tbChaine"
+            Margin="0,10,0,10"
+            FontSize="25"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbxAnnee"
+            Text="Chaine" />
+        <TextBox
+            Name="tbxChaine"
+            Width="300"
+            Margin="0,10,0,10"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbChaine"
+            Text="{Binding serieToAdd.Network, Mode=TwoWay}" />
+
+        <Button
+            Name="btAjouter"
+            Width="300"
+            Margin="0,20,0,20"
+            Command="{Binding BtnAddSerie}"
+            Content="Ajouter"
+            FontSize="25"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.Below="tbxChaine" />
+    </RelativePanel>
+</Page>
